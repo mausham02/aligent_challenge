@@ -1,16 +1,40 @@
 {
-  "name": "aligent_challenge",
+  "name": "AligentChallenge",
   "version": "1.0.0",
-  "description": "This is a technical challenge from Aligent Consulting for code review",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "node ace serve --watch",
+    "build": "node ace build --production",
+    "start": "node server.js",
+    "lint": "eslint . --ext=.ts",
+    "format": "prettier --write ."
   },
-  "author": "Mausham Shrestha",
-  "license": "ISC"
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.3.8",
+    "@types/jsdom": "^16.2.13",
+    "@types/supertest": "^2.0.11",
+    "adonis-preset-ts": "^2.1.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-adonis": "^2.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "execa": "^5.1.1",
+    "get-port": "^5.1.1",
+    "japa": "^4.0.0",
+    "jsdom": "^19.0.0",
+    "pino-pretty": "^7.2.0",
+    "prettier": "^2.5.1",
+    "supertest": "^6.1.6",
+    "typescript": "^4.5.3",
+    "youch": "^2.2.2",
+    "youch-terminal": "^1.1.1"
+  },
+  "dependencies": {
+    "@adonisjs/core": "^5.4.2",
+    "@adonisjs/repl": "^3.1.7",
+    "luxon": "^2.2.0",
+    "proxy-addr": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.21"
+  }
 }
