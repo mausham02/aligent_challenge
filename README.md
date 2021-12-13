@@ -1,3 +1,9 @@
+1. Command for running the app
+```
+node ace serve --watch
+```
+
+
 > Command for listing all the routes
 ```
 node ace list:routes
