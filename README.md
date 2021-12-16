@@ -1,6 +1,10 @@
 1. Explain Framework
 2. Explain Luxon
-3. 
+3. Explain API
+4. Testing 
+5. Running the code
+6. Middleware
+
 
 
 1. Command for running the app
