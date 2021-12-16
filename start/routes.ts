@@ -25,6 +25,11 @@ Route.get('/',()=>{
         "Task" : "Aligent Programming Test"
     }
 });
-Route.post('/days', 'DaysController.handleRequest');
-Route.post('/weeks', 'WeeksController.handleRequest');
-Route.post('/weekdays', 'WeekDaysController.handleRequest');
+
+Route
+    .group(() => {
+        Route.post('/days', 'DaysController.handleRequest');
+        Route.post('/weeks', 'WeeksController.handleRequest');
+        Route.post('/weekdays', 'WeekDaysController.handleRequest');
+    })
+    .middleware('datetime');
