@@ -10,31 +10,36 @@ export default class DateTimeConvertController{
         });
         // data validation for timezone and output type
         if (timezone) {
+            
             parsedDate = parsedDate.setZone(timezone)
+            if(!parsedDate.isValid){
+                if (parsedDate.invalidReason == 'unsupported zone') {
+                    throw new Error('The timezone parameter is invalid')
+                }
+                throw new Error('Date has been provided in incorrect form')
+            }
         }
         return parsedDate;
     }
 
-    // Returning the difference in the dates in different formats
-    public static formatDate(firstDate, secondDate, _format){
+    /**
+     * Returning the difference in the dates in different formats
+     * @param _result - in seconds
+     * @param _format 
+     * @returns 
+     */
+    public static formatDate(_result, _format){
         switch(_format){
-            case 'days' : return firstDate.diff(secondDate, 'days').toObject().days;
-            break;
-            
-            case 'minutes' : return firstDate.diff(secondDate, 'minutes').toObject().minutes;
-            break;
+            case 'minutes': return _result / 60
 
-            case 'hours' : return  firstDate.diff(secondDate, 'hours').toObject().hours;
-            break;
+            case 'hours': return _result / 60 
 
-            case 'seconds' : return firstDate.diff(secondDate, 'seconds').toObject().seconds;
-            break;
+            case 'seconds': return _result
 
-            case 'years' : return firstDate.diff(secondDate, 'years').toObject().years;
-            break;
+            case 'years': return _result / 60
 
-            default: return {'nothing': 'Null'}
-            break;
+            default: 
+                throw new Error('The parameter format is invalid')
         }
     }
 

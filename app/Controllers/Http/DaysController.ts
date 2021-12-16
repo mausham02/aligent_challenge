@@ -24,16 +24,21 @@ export default class DaysController {
             })
             return;
         }
-        const _format=body.format;
+
+        const _format = body.format;
+
+        const _result = firstDate.diff(secondDate, 'days').toObject()
         if(_format){
+            
+            const daysInSecs = Math.trunc(Number(_result.days)) * 24 * 60 * 60;
             return {
                 // Making sure the result is postive and rounding it to the nearest integer.
-                result : Math.abs(Math.trunc(Number(DateTimeConvertController.formatDate(firstDate,secondDate,_format))))
+                result : DateTimeConvertController.formatDate(daysInSecs, _format)
             };
         }else{
             return {
                 // Default format of result if there is no preference for output (Days/ Minutes / .......)
-                result : Math.abs(Math.trunc(Number(firstDate.diff(secondDate, 'days').toObject().days)))
+                result : Math.trunc(Number(_result.days))
             }
         }
     };

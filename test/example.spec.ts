@@ -12,7 +12,6 @@ test.group('endpoints', () => {
       .send({
           "first_date": "2021-03-20T00:01:00 Asia/Damascus",
           "second_date": "2021-03-21T00:01:00 Asia/Kuwait",
-          "format": "days",
           "timezone": "Asia/Kuala_Lumpur"
       })
       .expect(200)
@@ -48,7 +47,7 @@ test.group('endpoints', () => {
           "format": "days",
           "timezone": "Asia/Kuala_Lumpur"
       })
-      .expect(400)
+      .expect(500)
     
     let {message} = res.body;
 
@@ -62,7 +61,7 @@ test.group('endpoints', () => {
           "format": "days",
           "timezone": "Asia/Kuala_Lumpur"
       })
-      .expect(400)
+      .expect(500)
 
     assert.equal(res.body.message, 'Date has been provided in incorrect form');
   })
