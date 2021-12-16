@@ -4,7 +4,7 @@ node ace serve --watch
 ```
 2. Command for running the test 
 ```
-node -r @adonisjs/assembler/build/register japaFile.ts test/filename
+node -r @adonisjs/assembler/build/register japaFile.ts test
 ```
 
 
