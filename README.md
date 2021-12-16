@@ -4,7 +4,7 @@
 4. Testing 
 5. Running the code
 6. Middleware
-
+7. Figure for File structure 
 
 
 1. Command for running the app
