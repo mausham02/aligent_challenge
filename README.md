@@ -1,4 +1,4 @@
-This Project uses AdonisJS as a framework. 
+**This Project uses AdonisJS as a framework. **
 
 AdonisJS is a backend framework for Node.js. The framework is written in TypeScript and the application created using AdonisJS is also in TypeScript. It includes everything that is required to create a fully functional web app or an API server. AdonisJS offers a stable ecosystem to write server-side web application. Further explanation can be found here.
 
