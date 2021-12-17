@@ -3,7 +3,7 @@
 AdonisJS is a backend framework for Node.js. The framework is written in TypeScript and the application created using AdonisJS is also in TypeScript. It includes everything that is required to create a fully functional web app or an API server. AdonisJS offers a stable ecosystem to write server-side web application. Further explanation can be found [here](https://adonisjs.com/)
 
 <h4>Luxon</h4>
-The [luxon](https://moment.github.io/luxon/#/) library is used for dealing with date time in this project.
+The [luxon](https://moment.github.io/luxon) library is used for dealing with date time in this project.
 4. Explain API
 5. Testing 
 6. Running the code
