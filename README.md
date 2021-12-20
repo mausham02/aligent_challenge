@@ -49,14 +49,16 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```json
 { 
   "first_date" : "2019-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2019-03-17T00:)1:00 Asia/kuwait"
+  "second_date" : "2019-03-17T00:01:00 Asia/kuwait"
 }
 ```
 
 <strong>Default format</strong>
 
 ```json
-{ "result" : 2 }
+{ 
+  "result" : 3 
+}
 ```
 
 <strong>Input with format</strong>
@@ -64,7 +66,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```json
 { 
   "first_date" : "2022-09-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait",
+  "second_date" : "2021-03-21T00:01:00 Asia/kuwait",
   "format" : "seconds"  
 }
 ```
@@ -82,7 +84,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```json
 { 
   "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait",
+  "second_date" : "2021-03-21T00:01:00 Asia/kuwait",
   "format" : "hours" ,
   "timezone" : "Asia/Kuala_lumpur"
 }
