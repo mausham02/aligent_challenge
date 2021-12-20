@@ -38,6 +38,12 @@ In this project, supertest is used to make HTTP requests. More about the <strong
 npm run test
 ```
 
+<i>OR</i>
+```
+node -r @adonisjs/assembler/build/register japaFile.ts test
+```
+
+
 <strong>Middleware</strong>
 
 <h1><strong>Running the code</strong></h1>
@@ -67,8 +73,9 @@ POST | /weeks | WeeksController.handleRequest | |  |
 POST | /weekdays | WeekDays.controller.handleRequest | | |
 
 
-API 
-These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.
+<h2>API Description</h2>
+Note:
+<h4>These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.</h4>
 
 http://localhost/days
 This API is for calculation of numbers of <strong>days</strong> between two dates
