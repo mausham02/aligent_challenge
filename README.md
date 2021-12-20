@@ -45,6 +45,7 @@ node -r @adonisjs/assembler/build/register japaFile.ts test
 
 
 <strong>Middleware</strong>
+
 In this project middleware is used to check the validity of the input. Middleware is a series of function that are executed during an HTTP request before it
 reaches the route handler. Every middleware class must implement the handle method to handle the http request and call the next method to forward the request 
 to the next middleware or the route handler. More about the middleware in adonis can be found [here](https://docs.adonisjs.com/guides/middleware#document).
