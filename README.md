@@ -39,7 +39,7 @@ POST | /weekdays | WeekDays.controller.handleRequest | | |
 
 
 API 
-These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(output_type)" and "timezone" to give the required results.
+These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.
 
 http://localhost/weeks
 This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
