@@ -99,7 +99,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```
 
 http://localhost/weeks
-This API is for calculation of numbers of <strong>weekdays</strong> between two dates
+This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
 
 ```json
 { 
@@ -117,7 +117,7 @@ This API is for calculation of numbers of <strong>weekdays</strong> between two 
 ```
 
 http://localhost/weekdays
-This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
+This API is for calculation of numbers of <strong>weekdays</strong> between two dates
 
 <strong>Input</strong>
 ```json
