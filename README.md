@@ -1,8 +1,7 @@
 <h1>ABOUT</h1>
 This is the programming challenge from Aligent Consulting for Backend Developer position.
-
+<hr>
 <strong> Description</strong>
-
 <i>Create an API that can be used to:
 1. Find out the number of days between two datetime parameters.
 2. Find out the number of weekdays between two datetime parameters.
@@ -13,7 +12,7 @@ seconds, minutes, hours, years.
 different timezones.
 </i>
 
-<strong> This Project uses AdonisJS as a framework </strong>
+<h2><strong> This Project uses AdonisJS as a framework </strong></h2>
 
 AdonisJS is a backend framework for Node.js. The framework is written in TypeScript and the application created using AdonisJS is also in TypeScript. It includes everything that is required to create a fully functional web app or an API server. AdonisJS offers a stable ecosystem to write server-side web application. Further explanation can be found [here](https://adonisjs.com/)
 
@@ -52,10 +51,6 @@ node -r @adonisjs/assembler/build/register japaFile.ts test
 1. Command for running the app
 ```
 node ace serve --watch
-```
-2. Command for running the test 
-```
-node -r @adonisjs/assembler/build/register japaFile.ts test
 ```
 
 > Command for listing all the routes
