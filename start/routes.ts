@@ -22,7 +22,7 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/',()=>{
     return {
-        "Task" : "Aligent Programming Test"
+        "Task" : "This project is about finding the interval between two dates in days/complete weeks/ weekdays and optionally converting it into seconds/hours/minutes/years"
     }
 });
 
