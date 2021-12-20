@@ -130,7 +130,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 }
 ```
 
-<strong>Output in hours</strong>
+<strong>Output in seconds</strong>
 
 ```json
 { 
@@ -151,7 +151,7 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 }
 ```
 
-<strong>output in seconds for Minutes</strong>
+<strong>output in Minutes</strong>
 
 ```json
 { "result" : 1572480  }
