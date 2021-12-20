@@ -112,7 +112,7 @@ This API is for calculation of numbers of <strong>weekdays</strong> between two 
 
 ```json
 { "result" : 22723200 }
-
+```
 
 http://localhost/weekdays
 This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
@@ -121,7 +121,7 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 ```json
 { 
   "first_date" : "2022-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-17T00:)1:00 Asia/kuwait"
+  "second_date" : "2021-03-17T00:01:00 Asia/kuwait"
 }
 ```
 
