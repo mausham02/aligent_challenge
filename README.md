@@ -45,6 +45,12 @@ node -r @adonisjs/assembler/build/register japaFile.ts test
 
 
 <strong>Middleware</strong>
+In this project middleware is used to check the validity of the input. Middleware is a series of function that are executed during an HTTP request before it
+reaches the route handler. Every middleware class must implement the handle method to handle the http request and call the next method to forward the request 
+to the next middleware or the route handler. More about the middleware in adonis can be found [here](https://docs.adonisjs.com/guides/middleware#document).
+
+[Link for the Further explanation](https://www.youtube.com/watch?v=HxkCHZ3ek-4)
+
 
 <h1><strong>Running the code</strong></h1>
 
@@ -73,8 +79,8 @@ POST | /weekdays | WeekDays.controller.handleRequest | | |
 Note:
 <h4>These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.</h4>
 <hr>
-http://localhost/days
 
+http://localhost/days
 This API is for calculation of numbers of <strong>days</strong> between two dates
 
 <strong>Input</strong>
