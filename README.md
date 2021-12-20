@@ -41,17 +41,21 @@ POST | /weekdays | WeekDays.controller.handleRequest | | |
 API 
 These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.
 
-http://localhost/weeks
-This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
+http://localhost/days
+This API is for calculation of numbers of <strong>days</strong> between two dates
 
 <strong>Input</strong>
   
 ```json
 { 
-  "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait"
+  "first_date" : "2019-03-20T00:01:00 Asia/Damascus" ,
+  "second_date" : "2019-03-17T00:)1:00 Asia/kuwait"
 }
 ```
+
+<strong>Default format</strong>
+```json
+{ "result" : 2 }
 
 <strong>Input with format</strong>
 
@@ -88,16 +92,38 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 }
 ```
 
+http://localhost/weeks
+This API is for calculation of numbers of <strong>weekdays</strong> between two dates
+```json
+{ 
+  "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
+  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait",
+  "format" : "seconds" ,
+  "timezone" : "Asia/Kuwait"
+}
+```
+
+<strong>output in seconds for weekdays</strong>
+```json
+{ "result" : 22723200 }
 
 
 http://localhost/weekdays
-This API is for calculation of numbers of <strong>weekdays</strong> between two dates
+This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
 
-http://localhost/days
-This API is for calculation of numbers of <strong>days</strong> between two dates
-
+<strong>Input</strong>
 ```json
-{ "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait"
+{ 
+  "first_date" : "2022-03-20T00:01:00 Asia/Damascus" ,
+  "second_date" : "2021-03-17T00:)1:00 Asia/kuwait"
 }
 ```
+
+<strong>output in default format</strong>
+```json
+{ "result" : 263 }
+```
+
+
+
+
