@@ -2,6 +2,7 @@
 This is the programming challenge from Aligent Consulting for Backend Developer position.
 <hr>
 <strong> Description</strong>
+
 <i>Create an API that can be used to:
 1. Find out the number of days between two datetime parameters.
 2. Find out the number of weekdays between two datetime parameters.
@@ -71,7 +72,7 @@ POST | /weekdays | WeekDays.controller.handleRequest | | |
 <h2>API Description</h2>
 Note:
 <h4>These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.</h4>
-
+<hr>
 http://localhost/days
 This API is for calculation of numbers of <strong>days</strong> between two dates
 
@@ -128,7 +129,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
   "result" : 31449600
 }
 ```
-
+<hr>
 http://localhost/weeks
 This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
 
@@ -146,7 +147,7 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 ```json
 { "result" : 1572480  }
 ```
-
+<hr>
 http://localhost/weekdays
 This API is for calculation of numbers of <strong>weekdays</strong> between two dates
 
