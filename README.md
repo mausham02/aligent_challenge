@@ -1,3 +1,18 @@
+<h1>ABOUT</h1>
+This is the programming challenge from Aligent Consulting for Backend Developer position.
+
+<strong> Description</strong>
+
+<i>Create an API that can be used to:
+1. Find out the number of days between two datetime parameters.
+2. Find out the number of weekdays between two datetime parameters.
+3. Find out the number of complete weeks between two datetime parameters.
+4. Accept a third parameter to convert the result of (1, 2 or 3) into one of
+seconds, minutes, hours, years.
+5. Allow the specification of a timezone for comparison of input parameters from
+different timezones.
+</i>
+
 <strong> This Project uses AdonisJS as a framework </strong>
 
 AdonisJS is a backend framework for Node.js. The framework is written in TypeScript and the application created using AdonisJS is also in TypeScript. It includes everything that is required to create a fully functional web app or an API server. AdonisJS offers a stable ecosystem to write server-side web application. Further explanation can be found [here](https://adonisjs.com/)
@@ -7,10 +22,25 @@ AdonisJS is a backend framework for Node.js. The framework is written in TypeScr
 The [luxon](https://moment.github.io/luxon/) library is used for dealing with date time in this project.
 
 
-5. Testing 
-6. Running the code
-7. Middleware
-8. Figure for File structure 
+<h2>Testing the API</h2>
+<strong>Japa</strong>
+
+Japa is a test runner to create test runners. It is a tiny Node.js test runner that can be used to test apps or even create test runner. It is simple, fast
+and has minimal core. It doesn't ship with any CLI. 
+
+<strong>SuperTest</strong>
+
+In this project, supertest is used to make HTTP requests. More about the <strong>supertest</strong> can be found [here](https://github.com/visionmedia/supertest/).
+
+<strong><i>Command for running the test</i></strong>
+
+```
+npm run test
+```
+
+<strong>Middleware</strong>
+
+<h1><strong>Running the code</strong></h1>
 
 
 1. Command for running the app
@@ -21,7 +51,6 @@ node ace serve --watch
 ```
 node -r @adonisjs/assembler/build/register japaFile.ts test
 ```
-
 
 > Command for listing all the routes
 ```
