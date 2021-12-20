@@ -6,7 +6,7 @@ AdonisJS is a backend framework for Node.js. The framework is written in TypeScr
 
 The [luxon](https://moment.github.io/luxon/) library is used for dealing with date time in this project.
 
-4. Explain API
+
 5. Testing 
 6. Running the code
 7. Middleware
@@ -36,3 +36,16 @@ HEAD, GET | / | Closure | | |
 POST  | /days | DaysController.handleRequest | |  | 
 POST | /weeks | WeeksController.handleRequest | |  | 
 POST | /weekdays | WeekDays.controller.handleRequest | | |
+
+
+API 
+These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(output_type)" and "timezone" to give the required results.
+http://localhost/weeks
+
+This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
+
+http://localhost/weekdays
+This API is for calculation of numbers of <strong>weekdays</strong> between two dates
+
+http://localhost/days
+This API is for calculation of numbers of <strong>days</strong> between two dates
