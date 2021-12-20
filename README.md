@@ -126,6 +126,7 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 ```
 
 <strong>output in default format</strong>
+
 ```json
 { "result" : 263 }
 ```
