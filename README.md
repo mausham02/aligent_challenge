@@ -102,7 +102,7 @@ This API is for calculation of numbers of <strong>weekdays</strong> between two 
 ```json
 { 
   "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:)1:00 Asia/kuwait",
+  "second_date" : "2021-03-21T00:01:00 Asia/kuwait",
   "format" : "seconds" ,
   "timezone" : "Asia/Kuwait"
 }
