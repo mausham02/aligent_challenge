@@ -74,6 +74,7 @@ Note:
 <h4>These api accepts "first_date" and "second_date" as two parameters and optional parameters which are "format(Output type)" and "timezone" to give the required results.</h4>
 <hr>
 http://localhost/days
+
 This API is for calculation of numbers of <strong>days</strong> between two dates
 
 <strong>Input</strong>
@@ -130,6 +131,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 }
 ```
 <hr>
+
 http://localhost/weeks
 This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
 
@@ -148,6 +150,7 @@ This API is for calculation of numbers of <strong>complete weeks</strong> betwee
 { "result" : 1572480  }
 ```
 <hr>
+
 http://localhost/weekdays
 This API is for calculation of numbers of <strong>weekdays</strong> between two dates
 
