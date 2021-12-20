@@ -83,9 +83,9 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 
 ```json
 { 
-  "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
+  "first_date" : "2022-03-20T00:01:00 Asia/Damascus" ,
   "second_date" : "2021-03-21T00:01:00 Asia/kuwait",
-  "format" : "hours" ,
+  "format" : "seconds" ,
   "timezone" : "Asia/Kuala_lumpur"
 }
 ```
@@ -94,7 +94,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 
 ```json
 { 
-  "result" : 8832
+  "result" : 31449600
 }
 ```
 
@@ -103,17 +103,17 @@ This API is for calculation of numbers of <strong>weekdays</strong> between two 
 
 ```json
 { 
-  "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
-  "second_date" : "2021-03-21T00:01:00 Asia/kuwait",
-  "format" : "seconds" ,
+  "first_date" : "2017-03-20T00:01:00 Asia/Damascus" ,
+  "second_date" : "2014-03-17T12:01:00 Asia/kuwait",
+  "format" : "minutes" ,
   "timezone" : "Asia/Kuwait"
 }
 ```
 
-<strong>output in seconds for weekdays</strong>
+<strong>output in seconds for Minutes</strong>
 
 ```json
-{ "result" : 22723200 }
+{ "result" : 1572480  }
 ```
 
 http://localhost/weekdays
