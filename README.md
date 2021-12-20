@@ -54,8 +54,10 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```
 
 <strong>Default format</strong>
+
 ```json
 { "result" : 2 }
+```
 
 <strong>Input with format</strong>
 
@@ -68,6 +70,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```
 
 <strong>Output in Seconds</strong>
+
 ```json
 { 
   "result" : 47347200
@@ -86,6 +89,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 ```
 
 <strong>Output in hours</strong>
+
 ```json
 { 
   "result" : 8832
@@ -94,6 +98,7 @@ This API is for calculation of numbers of <strong>days</strong> between two date
 
 http://localhost/weeks
 This API is for calculation of numbers of <strong>weekdays</strong> between two dates
+
 ```json
 { 
   "first_date" : "2021-03-20T00:01:00 Asia/Damascus" ,
@@ -104,6 +109,7 @@ This API is for calculation of numbers of <strong>weekdays</strong> between two 
 ```
 
 <strong>output in seconds for weekdays</strong>
+
 ```json
 { "result" : 22723200 }
 
