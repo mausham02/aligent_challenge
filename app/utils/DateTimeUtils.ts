@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 
+// Allowed formats
 const ACCEPTED_FORMATS = {
     MINUTES: 'minutes',
     HOURS: 'hours',
@@ -7,6 +8,11 @@ const ACCEPTED_FORMATS = {
     YEARS: 'years'
 }
 
+/**
+ * checks the format is valid or not
+ * @param format -The desired output type by the user
+ * @returns boolean
+ */
 const isValidFormat = (format) => {
     for (let property in ACCEPTED_FORMATS) {
         if (ACCEPTED_FORMATS[property] == format) {
@@ -17,9 +23,9 @@ const isValidFormat = (format) => {
 }
 
 /**
- * 
- * @param original 
- * @param timezone 
+ * It transforms the givgen date string into object based on timezone.
+ * @param original DateTime in ISO format
+ * @param timezone - Optional Parameter
  * @returns 
  */
 const transformDate = (original: string, timezone?: string): DateTime => {
@@ -43,7 +49,7 @@ const transformDate = (original: string, timezone?: string): DateTime => {
 /**
  * Returning the difference in the dates in different formats
  * @param _result - in seconds
- * @param _format 
+ * @param _format - as entered by user
  * @returns 
  */
 const formatDate = (_result, _format) => {

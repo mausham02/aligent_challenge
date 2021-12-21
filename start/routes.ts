@@ -20,9 +20,9 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/',()=>{
+Route.get('/', () => {
     return {
-        "Task" : "This project is about finding the interval between two dates in days/complete weeks/ weekdays and optionally converting it into seconds/hours/minutes/years"
+        "Task": "This project is about finding the interval between two dates in days/complete weeks/ weekdays and optionally converting it into seconds/hours/minutes/years"
     }
 });
 

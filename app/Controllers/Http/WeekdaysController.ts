@@ -5,10 +5,10 @@ import differenceInBusinessDays from 'date-fns/differenceInBusinessDays';
 export default class WeekDaysController {
 
     /**
-     * 
-     * @param ctx 
-     * @returns 
-     */
+      * This method handles the http post request from /weekdays route
+      * @param ctx It holds the information like the request body, cookies, headers, etc
+      * @returns the response in the JSON format
+      */
     public async handleRequest(ctx: HttpContextContract) {
         const body = ctx.request.only(['first_date', 'second_date', 'format', 'timezone'])
 
@@ -21,6 +21,8 @@ export default class WeekDaysController {
         if (_format) {
             const weekdaysInSecs = Math.trunc(Number(_result)) * 24 * 60 * 60;
             return {
+                // Math.abs is used to make the result positive all the time
+                // Math.trunc is used to ignore the decimals
                 result: Math.abs(Math.trunc(formatDate(weekdaysInSecs, _format)))
             }
         } else {

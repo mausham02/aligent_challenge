@@ -35,8 +35,8 @@ export default class DateTimeMiddleware {
   }
 
   /**
-   * 
-   * @returns 
+   * This method checks if any of the dates are missing or invalid
+   * @returns true if both the dates are provided or false if the date provided is invalid/not provided
    */
   private checkDates(): boolean {
     const fields = ['first_date', 'second_date']
@@ -59,8 +59,8 @@ export default class DateTimeMiddleware {
   }
 
   /**
-   * 
-   * @returns boolean
+   * Checks for the invalid timezone
+   * @returns true if the timezone is valid
    */
   private checkTimezone(): boolean {
     const timezone = this.httpContext.request.input('timezone')
@@ -79,8 +79,8 @@ export default class DateTimeMiddleware {
   }
 
   /**
-   * 
-   * @returns boolean
+   * Checks for the invalid format
+   * @returns false if the format is invalid
    */
   private checkFormat(): boolean {
     const format = this.httpContext.request.input('format')
@@ -97,9 +97,9 @@ export default class DateTimeMiddleware {
   }
 
   /**
-   * 
-   * @param error string
-   * @param parameter string
+   * sends the error message and parameter which caused the error
+   * @param error string - error message 
+   * @param parameter string - false parameter
    */
   private send400Response(error: string, parameter: string) {
     this.httpContext.response.status(400).json({ error, parameter })

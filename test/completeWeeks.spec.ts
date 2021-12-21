@@ -117,7 +117,7 @@ test.group('Test for the /weeks Endpoint', () => {
       .expect(200)
     assert.equal(res.body.result, 1);
   })
-  
+
   // Test: 6 Checking almost two week difference
   test('ensure /weeks endpoints for almost two week difference', async (assert) => {
     let res = await supertest(BASE_URL)
@@ -163,37 +163,37 @@ test.group('Test for the /weeks Endpoint', () => {
         "first_date": "2021-03-20T00:01:00",
         "second_date": "2021-05-23T00:01:00",
         "format": "minutes",
-        "timezone" : "Asia/kuwait"
+        "timezone": "Asia/kuwait"
       })
       .expect(200)
     assert.equal(res.body.result, 90720);
   })
 
-    // Test: 9 Checking if the endpoint works with timezone and format in years
-    test('Checking for the /weeks enpoint to work if the format is in years', async (assert) => {
-      let res = await supertest(BASE_URL)
-        .post('/weeks')
-        .send({
-          "first_date": "2021-03-20T00:01:00 Australia/sydney",
-          "second_date": "2023-05-17T00:01:00",
-          "format": "years",
-          "timezone" : "Asia/kuwait"
-        })
-        .expect(200)
-      assert.equal(res.body.result, 2 );
-    })
+  // Test: 9 Checking if the endpoint works with timezone and format in years
+  test('Checking for the /weeks enpoint to work if the format is in years', async (assert) => {
+    let res = await supertest(BASE_URL)
+      .post('/weeks')
+      .send({
+        "first_date": "2021-03-20T00:01:00 Australia/sydney",
+        "second_date": "2023-05-17T00:01:00",
+        "format": "years",
+        "timezone": "Asia/kuwait"
+      })
+      .expect(200)
+    assert.equal(res.body.result, 2);
+  })
 
-    // Test: 10 Checking if the endpoint works with timezone and format in hours
-    test('ensure that the /weeks endpoints works if the format is in hours', async (assert) => {
-      let res = await supertest(BASE_URL)
-        .post('/weeks')
-        .send({
-          "first_date": "2017-03-15T00:01:00 Indian/Maldives",
-          "second_date": "2018-05-14T00:01:00 Africa/Johannesburg",
-          "format": "hours",
-          "timezone" : "Asia/Dubai"
-        })
-        .expect(200)
-      assert.equal(res.body.result, 10080);
-    })
+  // Test: 10 Checking if the endpoint works with timezone and format in hours
+  test('ensure that the /weeks endpoints works if the format is in hours', async (assert) => {
+    let res = await supertest(BASE_URL)
+      .post('/weeks')
+      .send({
+        "first_date": "2017-03-15T00:01:00 Indian/Maldives",
+        "second_date": "2018-05-14T00:01:00 Africa/Johannesburg",
+        "format": "hours",
+        "timezone": "Asia/Dubai"
+      })
+      .expect(200)
+    assert.equal(res.body.result, 10080);
+  })
 })
