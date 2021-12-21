@@ -4,6 +4,11 @@ import differenceInBusinessDays from 'date-fns/differenceInBusinessDays';
 
 export default class WeekDaysController {
 
+    /**
+     * 
+     * @param ctx 
+     * @returns 
+     */
     public async handleRequest(ctx: HttpContextContract) {
         const body = ctx.request.only(['first_date', 'second_date', 'format', 'timezone'])
 
@@ -13,19 +18,15 @@ export default class WeekDaysController {
 
         // Use of "date-fns" Library to get the number of weekdays between two dates
         const _result = differenceInBusinessDays(Number(firstDate), Number(secondDate))
-
         if (_format) {
             const weekdaysInSecs = Math.trunc(Number(_result)) * 24 * 60 * 60;
             return {
-                // Making sure the result is postive and rounding it to the nearest integer.
-                result: formatDate(weekdaysInSecs, _format)
-            };
+                result: Math.abs(Math.trunc(formatDate(weekdaysInSecs, _format)))
+            }
         } else {
             return {
-                // Default format of result if there is no preference for output (Days/ Minutes / .......)
-                result: Math.trunc(Number(_result))
+                result: Math.abs(Math.trunc(Number(_result)))
             }
         }
-
     }
 }
