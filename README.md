@@ -185,6 +185,8 @@ Result
 }
 ```
 
+<hr>
+
 <h3>http://localhost/weeks</h3>
   
 This API is for calculation of numbers of <strong>complete weeks</strong> between two dates
