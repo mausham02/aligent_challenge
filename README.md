@@ -167,24 +167,22 @@ Output in seconds
 
 Input with wrong first_date parameter
 
-```
-       {
-      
-        "first_date": "sdfdsfsdf",
-        "second_date": "2021-03-21T00:01:00 Asia/Kuwait",
-        "format": "days",
-        "timezone": "Asia/Kuala_Lumpur"
-        
-       }
+```json
+{
+  "first_date": "sdfdsfsdf",
+  "second_date": "2021-03-21T00:01:00 Asia/Kuwait",
+  "format": "days",
+  "timezone": "Asia/Kuala_Lumpur"
+}
 ```
 
 Result
 
-```
-      {
-          "error": "Date is in incorrect form",
-          "parameter": "first_date"
-      }
+```json
+{
+  "error": "Date is in incorrect form",
+  "parameter": "first_date"
+}
 ```
 
 <h3>http://localhost/weeks</h3>
@@ -213,7 +211,7 @@ Output in Minutes
 
 Input all the parameters except timezone.
 
-```
+```json
 {
   "first_date": "2021-05-01T00:00:00",
   "second_date": "2021-05-15T00:00:00",
@@ -224,7 +222,7 @@ Input all the parameters except timezone.
 
 Result in seconds
 
-```
+```json
 {
     "result": 1209600
 }
@@ -236,7 +234,7 @@ Result in seconds
 
 Input with all the parameters and expected result in minutes
 
-```
+```json
 {
   "first_date": "2021-03-20T00:01:00",
   "second_date": "2021-05-23T00:01:00",
@@ -247,7 +245,7 @@ Input with all the parameters and expected result in minutes
 
 Result in minutes
 
-```
+```json
 {
     "result": 90720
 }
@@ -257,7 +255,7 @@ Result in minutes
 <h5>Data Validation example for /weeks API </h5>
 
 Input with incorret format parameter
-```
+```json
 {
   "first_date": "2021-03-20T00:01:00 Asia/Damascus",
   "second_date": "2021-03-21T00:01:00 Asia/Kuwait",
@@ -269,7 +267,7 @@ Input with incorret format parameter
 
 Expected Output
 
-```
+```json
 {
     "error": "Parameter is not acceptable",
     "parameter": "format"
@@ -305,7 +303,7 @@ Output in default format
 
 Input with all the parameters except timezone
 
-```
+```json
 {
   "first_date": "2021-05-01T00:00:00",
   "second_date": "2021-05-15T00:00:00",
@@ -315,7 +313,7 @@ Input with all the parameters except timezone
 
 Output in seconds
 
-```
+```json
 {
     "result": 864000
 }
@@ -325,7 +323,7 @@ Output in seconds
 
 Input with all the parameters and expected number of weekdays in years.
 
-```
+```json
 {
   "first_date": "2021-03-20T00:01:00 Australia/sydney",
   "second_date": "2023-05-17T00:01:00",
@@ -336,7 +334,7 @@ Input with all the parameters and expected number of weekdays in years.
 
 Output in years
 
-```
+```json
 {
     "result": 1
 }
@@ -346,7 +344,7 @@ Output in years
 
 Input with wrong timezone
 
-```
+```json
 {
   "first_date": "2021-03-20T00:01:00 Asia/kuwait",
   "second_date": "2021-01-17T12:02:01 Asia/Kuala_Lumpur",
@@ -358,7 +356,7 @@ Input with wrong timezone
 
 Error shown as a result
 
-```
+```json
 {
     "error": "The timezone is invalid",
     "parameter": "timezone"
